@@ -1,0 +1,46 @@
+[
+  {
+    "id": 3183845174,
+    "notificationType_id": 1,
+    "cycle_id": 568894057,
+    "payload": "{\"result\":{\"resultHint\":\"00\",\"resultSuccess\":true,\"resultCode\":\"000\",\"resultDetailing\":0,\"resultMessage\":\"Sem detalhamento\",\"properties\":{\"Brand\":\"VISA\",\"NSU\":\"793997\",\"AuthorizationCode\":\"012233\",\"Gateway\":\"CIELOV3\",\"PaymentId\":\"2a601f10-a23d-4e8a-8079-d7268c4c6ee9\",\"ProofOfSale\":\"793997\",\"Tid\":\"10988596662O8AM6TKDC\",\"TID\":\"10988596662O8AM6TKDC\",\"Provider\":\"CIELO\"}},\"nsu\":\"10988596662O8AM6TKDC\",\"authorizationNumber\":\"012233\"}",
+    "extid": "2023010081872516|B66F60CCBCE04F7BA005",
+    "created": "2023-02-01 11:12:17.883",
+    "reason": null,
+    "request_id": 3240574613,
+    "status": "200"
+  },
+  {
+    "id": 3184958208,
+    "notificationType_id": 5,
+    "cycle_id": 568894057,
+    "payload": "?nsu=44393&isAuthorized=true&response=00&responseTimeStamp=1675335956824&externalId=2023010081872516|ECD02D1D4F4542CF87EF&type=AUTHORIZE_RESPONSE&serviceId=1102&responseMessage=FNova Vivo Pre Turbo com ligacoes@ilimitadas para qualquer operadora@do Brasil e 3GB, por menos de R$1@por dia. Cadastre-se em@vivo.com.br/pre&jsonRequestProperties={\"payment_type\":\"VISA\",\"cycleid\":\"568894057\",\"acquirer\":\"CIELO\",\"gateway\":\"CIELOV3\"}",
+    "extid": "2023010081872516|ECD02D1D4F4542CF87EF",
+    "created": "2023-02-02 11:27:03.157",
+    "reason": null,
+    "request_id": 3241700758,
+    "status": "200"
+  },
+  {
+    "id": 3184958224,
+    "notificationType_id": 3,
+    "cycle_id": 568894057,
+    "payload": "{\"result\":{\"resultHint\":\"00\",\"resultSuccess\":true,\"resultCode\":\"000\",\"resultDetailing\":0,\"resultMessage\":\"Sem detalhamento\",\"properties\":{\"Status\":\"2\"}}}",
+    "extid": "2023010081872516|B66F60CCBCE04F7BA005",
+    "created": "2023-02-02 11:27:03.350",
+    "reason": null,
+    "request_id": 3241700767,
+    "status": "200"
+  },
+  {
+    "id": 3185463409,
+    "notificationType_id": 6,
+    "cycle_id": 568894057,
+    "payload": null,
+    "extid": "2023010081872516|ECD02D1D4F4542CF87EF",
+    "created": "2023-02-03 05:07:49.503",
+    "reason": null,
+    "request_id": 3242216466,
+    "status": "200"
+  }
+]

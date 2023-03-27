@@ -1,0 +1,70 @@
+{
+    "trigger": {
+      "schedule": {
+        "interval": "5m"
+      }
+    },
+    "input": {
+      "search": {
+        "request": {
+          "search_type": "query_then_fetch",
+          "indices": [
+            "application-write-*"
+          ],
+          "types": [],
+          "body": {
+            "query": {
+              "bool": {
+                "must": [
+                  {
+                    "match": {
+                      "appName": "pegasus-scheduler"
+                    }
+                  },
+                  {
+                    "match": {
+                        "mensagem": "[PEGASUS] - [PROCESS CALLBACK] - [CYCLE NOT CONCLUSION] with id: "
+                      }
+                  },
+                  {
+                    "match": {
+                      "level": "INFO"
+                    }
+                  },
+                  {
+                    "range": {
+                      "@timestamp": {
+                        "gte": "now-5m",
+                        "lt": "now"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "condition": {
+      "compare": {
+        "ctx.payload.hits.total": {
+          "gte": 100
+        }
+      }
+    },
+    "actions": {
+      "plat-recorrencia-slack-channel": {
+        "webhook": {
+          "scheme": "https",
+          "host": "hooks.slack.com",
+          "port": 443,
+          "method": "post",
+          "path": "/services/T03GQ08BX/B01HZ963TE0/muiNsolwGTHJ3uq4LYyBN3Td",
+          "params": {},
+          "headers": {},
+          "body": "{\"text\":\"Encountered {{ctx.payload.hits.total}} errors on the pegasus-scheduler in the last 5 minutes\"}"
+        }
+      }
+    }
+  }
